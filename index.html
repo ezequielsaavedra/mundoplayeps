@@ -1,15 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9df08150f3.js" crossorigin="anonymous"></script>
+    <title>Mundo Play</title>
 </head>
-
-<body>
+<body class="container-fluid">
+    <header class="row sticky-lg-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Mundo Play</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                        <button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="row justify-content-center home pt-5">
+        <section class="col-8">
+            <div class="row">
+                <h1 class="pt-5">Productos Destacados</h1>
+                <aside class="col-3 pt-3">
+                    <h2>Categorias</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="categoriaRadios" id="Disparos" value="option1" checked>
+                        <label class="form-check-label" for="Disparos">
+                            Disparos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="categoriaRadios" id="Aventura" value="option2">
+                        <label class="form-check-label" for="Aventura">
+                            Aventura
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="categoriaRadios" id="Accion" value="option2">
+                        <label class="form-check-label" for="Accion">
+                            Accion
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="categoriaRadios" id="Deportes" value="option2">
+                        <label class="form-check-label" for="Deportes">
+                            Deportes
+                        </label>
+                    </div>
+                    <h2 class="pt-5">Consola</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="consolaRadios" id="PS4" value="option1" checked>
+                        <label class="form-check-label" for="PS4">
+                            PS4
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="consolaRadios" id="PS5" value="option2">
+                        <label class="form-check-label" for="PS5">
+                            PS5
+                        </label>
+                    </div>
+                    <h2 class="pt-5">Precio</h2>
+                    <input type="radio" class="btn-check" name="precio" id="precio1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="precio1">$$$</label>
+                    <input type="radio" class="btn-check" name="precio" id="precio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="precio2">$$$</label>
+                    <input type="radio" class="btn-check" name="precio" id="precio3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="precio3">$$$</label>
+                    <input type="radio" class="btn-check" name="precio" id="precio4" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="precio4">$$$</label>
+                </aside>
+                <article class="col-9 pt-5">
+                    <div class="row">
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/74RrfwB/bloodborne-ps4.jpg" class="card-img-top" alt="Bloodborne ps4"> 
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/Ntjg681/god-of-war-ragnarok-ps5.jpg" class="card-img-top" alt="God of War Ragnarok ps5">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/PrPGtym/horizon-forbidden-west-ps5.jpg" class="card-img-top" alt="Horizon Forbidden West ps5">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/4ZVfvhT/days-gone-ps4.jpg" class="card-img-top" alt="Days Gone ps4">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/NVHjZPS/god-of-war-ps4.jpg" class="card-img-top" alt="God of War ps4">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/dGHHbLX/cod-moder-warfare-ps4.jpg" class="card-img-top" alt="Call of Duty Moder Warfare ps4">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/YRJHNsz/spiderman-miles-morales-ps5.jpg" class="card-img-top" alt="Spiderman Miles Morales ps5">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/1LqDB7J/elden-ring-ps5.jpg" class="card-img-top" alt="Elden Ring ps5">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/2yYzbhT/demons-souls-ps5.jpg" class="card-img-top" alt="Demons Souls ps5">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/QjvnbTL/tlou-2-ps4.jpg" class="card-img-top" alt="The Last of Us 2 ps4">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/WW8YZdM/fifa-23-ps5.png" class="card-img-top" alt="FIFA 23 PS5">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3 col-4 producto">
+                            <img src="https://i.ibb.co/3TqMHkf/uncharted-coleccion-legado-ps5.jpg" class="card-img-top" alt="Uncharted Coleccion Legado de los Ladrones PS5">
+                            <div class="card-body d-flex justify-content-around">
+                                <button class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$$$</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer class="row">
+            <div clas>
+            </div>
+        </footer>
+    </main>
     <script src="js/index.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
-
 </html>

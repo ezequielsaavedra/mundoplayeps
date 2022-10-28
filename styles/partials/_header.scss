@@ -1,0 +1,14 @@
+header {
+    min-height: 10vh;
+    nav {
+        background-image: linear-gradient(to top, $background-gradiente-lineal);
+        li{
+            a{
+                color: white;
+                &:hover {
+                    color: rgb(185, 177, 177);
+                }
+            }
+        }
+    }
+}
