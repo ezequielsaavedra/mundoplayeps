@@ -44,7 +44,7 @@ let precioCarrito = 0
 mostrarCarrito = () => {
     carrito.forEach (prod => {
         precioCarrito += prod.precio
-        productosCarrito += `\n ${prod.nombre} por un total de ${precioCarrito}`
+        productosCarrito += `\n ${prod.nombre}`
     }
         )
 };
@@ -85,6 +85,7 @@ while (seguirComprando === true) {
     } else { 
         mostrarCarrito ()
         alert(productosCarrito)
+        alert(`Su total es de ${precioCarrito}`)
         alert("Muchas gracias por elegirnos!!")
         seguirComprando = false
     }
