@@ -1,7 +1,7 @@
 header {
     min-height: 10vh;
+    background-image: linear-gradient(to top, $background-gradiente-lineal);
     nav {
-        background-image: linear-gradient(to top, $background-gradiente-lineal);
         li{
             a{
                 color: white;
@@ -10,5 +10,16 @@ header {
                 }
             }
         }
+    }
+    #btnCarrito{
+        cursor: pointer;
+    }
+    #contador {
+        background-color: rgb(207, 204, 204);
+        width: 1.5rem;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        font-family:$font;
+        cursor: pointer;
     }
 }

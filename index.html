@@ -5,82 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/9df08150f3.js" crossorigin="anonymous"></script>
     <title>Mundo Play</title>
 </head>
 <body class="container-fluid">
+    <!-- header -->
     <header class="row sticky-lg-top">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark col-11">
             <div class="container-fluid">
-                <a class="navbar-brand " href="#">Mundo Play</a>
+                <a class="navbar-brand align-items-center" href="#">Mundo Play</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-primary" type="submit">Buscar</button>
-                        <button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i></button>
-                    </form>
-                </div>
             </div>
         </nav>
+        <!-- offcanvas -->
+        <div class="col-1 d-flex" >
+            <div class="align-self-center hidden">
+                <i class="fa-solid fa-cart-shopping fa-2xl" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnCarrito"></i>
+                <span class="fa-layers-counter" id ="contador">0</span>
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRight">Carrito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <div id="carrito">
+                </div>
+                <div>
+                    <hr>
+                    <h5 id="totalCompra"></h5>
+                    <button class="btn btn-primary" id="finalizarCompra" type="button" onclick="finalizarCompra()">Finalizar compra</button>
+                </div>
+                <div id="formComprar">
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </header>
+    <!-- main -->
     <main class="row justify-content-center home pt-5">
-        <section class="col-8">
+        <div class="card login">
+            <form class="row g-3">
+                <h3 class="card-title">Bienvenido a Mundo Play</h3>
+                <h5 class="card-title">Ingrese sus datos</h5>
+                <div class="col-md-6">
+                    <label for="inputNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputNombre" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputApellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="inputApellido" required>
+                </div>
+                <div class="col-12">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" required>
+                </div>
+                <div class="col-12 d-flex justify-content-center g-5">
+                    <button type="button" class="btn btn-primary" id="btnIngresar">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        <!-- filtros -->
+        <section class="col-8 hidden">
             <div class="row">
                 <h1 class="pt-5" id="filtro" >Productos Destacados</h1>
                 <aside class="col-3 pt-3">
+                    <button class="btn btn-primary mt-3 btn-hidden" id="eliminarFiltros" value="option5">
+                        Eliminar filtros <i class="fa-solid fa-xmark fa-xl ms-2 " ></i>
+                    </button>
                     <h2>Categorias</h2>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoriacheckboxs" id="Disparos" value="option1">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Disparos" value="option1">
                         <label class="form-check-label" for="Disparos">
                             Disparos
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoriacheckboxs" id="Aventura" value="option2">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Aventura" value="option2">
                         <label class="form-check-label" for="Aventura">
                             Aventura
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoriacheckboxs" id="Accion" value="option3">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Accion" value="option3">
                         <label class="form-check-label" for="Accion">
                             Accion
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoriacheckboxs" id="Deportes" value="option4">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Deportes" value="option4">
                         <label class="form-check-label" for="Deportes">
                             Deportes
                         </label>
                     </div>
                     <h2 class="pt-5">Consola</h2>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="consolacheckboxs" id="PS4" value="option1">
+                        <input class="form-check-input consolaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="PS4" value="option5">
                         <label class="form-check-label" for="PS4">
                             PS4
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="consolacheckboxs" id="PS5" value="option2">
+                        <input class="form-check-input consolaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="PS5" value="option6">
                         <label class="form-check-label" for="PS5">
                             PS5
                         </label>
                     </div>
-                    <h2 class="pt-5">Precio</h2>
-                    <input type="checkbox" class="btn-check" name="precio" id="precio1">
-                    <label class="btn btn-outline-primary" for="precio1">$10.00-$19.99</label>
-                    <input type="checkbox" class="btn-check" name="precio" id="precio2">
-                    <label class="btn btn-outline-primary" for="precio2">$20.00-$39.99</label>
-                    <input type="checkbox" class="btn-check" name="precio" id="precio3">
-                    <label class="btn btn-outline-primary" for="precio3">$40.00-$59.99</label>
-                    <input type="checkbox" class="btn-check" name="precio" id="precio4">
-                    <label class="btn btn-outline-primary" for="precio4">$60.00-$80.00</label>
                 </aside>
+                <!-- juegos -->
                 <article class="col-9 pt-5">
                     <div class="row" id="juegos">
                     </div>
@@ -94,6 +129,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/9df08150f3.js" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
