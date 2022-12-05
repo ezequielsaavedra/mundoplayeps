@@ -24,12 +24,12 @@ $("#btnIngresar").click(function(){
 const juegos = document.getElementById("juegos");
 const carritoOffcanvas = document.getElementById("carrito");
 const totalCompra = document.getElementById("totalCompra");
-const contador = document.getElementById("contador")
-const formComprar = document.getElementById("formComprar")
+const contador = document.getElementById("contador");
+const formComprar = document.getElementById("formComprar");
 let indexObjet = 0;
 
 class Productos {
-    constructor (nombre, precio, consola, categoria, categoriaDos, imagen, cantidad){
+    constructor (nombre, precio, consola, categoria, categoriaDos, imagen){
     this.nombre = nombre;
     this.precio = precio;
     this.consola = consola;
@@ -77,7 +77,8 @@ const producto32 = new Productos ("AOTennis 2", 5900, "PS4", "Deportes", "Produc
 const producto33 = new Productos ("The Show 21", 11800, "PS5", "Deportes", "Producto-estandar", "https://i.ibb.co/XzBrQVL/theshow21.jpg");
 const producto34 = new Productos ("W2C 10", 11800, "PS5", "Deportes", "Producto-estandar", "https://i.ibb.co/9grJGRq/w2c-10.jpg");
 
-const arrayProductos = [producto0, 
+const arrayProductos = [
+    producto0, 
     producto1,
     producto2,
     producto3, 
@@ -131,7 +132,7 @@ arrayProductos.forEach (p => {
             <p> Desea agregar ${p.nombre} al carrito?</p>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="agregarCarritoProducto${p.id}">Si</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick= "selecProd(producto${p.id},${p.id})" id="agregarCarritoProducto${p.id}">Si</button>
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
         </div>
         </div>
@@ -145,8 +146,7 @@ arrayProductos.forEach (p => {
 
 const carrito = [];
 
-const selecProd = (btn, prod, id) => {
-    $(btn).click(function(){
+const selecProd = (prod, id) => {
         if (carrito.find((prod) => prod.id === id)) {
             prod.cantidad++
         } else {
@@ -154,8 +154,7 @@ const selecProd = (btn, prod, id) => {
         }
         calcularPrecio ();
         contadorCarrito ();
-    }
-    )
+        console.log(carrito)
 }
 
 const agregarCarrito = () => {
@@ -260,43 +259,6 @@ const aceptarCompra = () => {
         calcularPrecio ();
         contadorCarrito ();
 }
-
-selecProd ("#agregarCarritoProducto0",producto0, 0);
-selecProd ("#agregarCarritoProducto1",producto1, 1);
-selecProd ("#agregarCarritoProducto2",producto2, 2);
-selecProd ("#agregarCarritoProducto3",producto3, 3);
-selecProd ("#agregarCarritoProducto4",producto4, 4);
-selecProd ("#agregarCarritoProducto5",producto5, 5);
-selecProd ("#agregarCarritoProducto6",producto6, 6);
-selecProd ("#agregarCarritoProducto7",producto7, 7);
-selecProd ("#agregarCarritoProducto8",producto8, 8);
-selecProd ("#agregarCarritoProducto9",producto9, 9);
-selecProd ("#agregarCarritoProducto10",producto10, 10);
-selecProd ("#agregarCarritoProducto11",producto11, 11);
-selecProd ("#agregarCarritoProducto12",producto12, 12);
-selecProd ("#agregarCarritoProducto13",producto13, 13);
-selecProd ("#agregarCarritoProducto14",producto14, 14);
-selecProd ("#agregarCarritoProducto15",producto15, 15);
-selecProd ("#agregarCarritoProducto16",producto16, 16);
-selecProd ("#agregarCarritoProducto17",producto17, 17);
-selecProd ("#agregarCarritoProducto18",producto18, 18);
-selecProd ("#agregarCarritoProducto19",producto19, 19);
-selecProd ("#agregarCarritoProducto20",producto20, 20);
-selecProd ("#agregarCarritoProducto21",producto21, 21);
-selecProd ("#agregarCarritoProducto22",producto22, 22);
-selecProd ("#agregarCarritoProducto23",producto23, 23);
-selecProd ("#agregarCarritoProducto24",producto24, 24);
-selecProd ("#agregarCarritoProducto25",producto25, 25);
-selecProd ("#agregarCarritoProducto26",producto26, 26);
-selecProd ("#agregarCarritoProducto27",producto27, 27);
-selecProd ("#agregarCarritoProducto28",producto28, 28);
-selecProd ("#agregarCarritoProducto29",producto29, 29);
-selecProd ("#agregarCarritoProducto30",producto30, 30);
-selecProd ("#agregarCarritoProducto31",producto31, 31);
-selecProd ("#agregarCarritoProducto32",producto32, 32);
-selecProd ("#agregarCarritoProducto33",producto33, 33);
-selecProd ("#agregarCarritoProducto34",producto34, 34);
-
 
 agregarCarrito ();
 
