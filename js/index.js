@@ -19,60 +19,16 @@ $("#btnIngresar").click(function(){
     }
 })
 
+
 //carrito
 
 const carritoOffcanvas = document.getElementById("carrito");
 const totalCompra = document.getElementById("totalCompra");
-const contador = document.getElementById("contador")
-const formComprar = document.getElementById("formComprar")
-let indexObjet = 0;
-
-class Productos {
-    constructor (nombre, precio, consola, categoria, categoriaDos, imagen, cantidad){
-    this.nombre = nombre;
-    this.precio = precio;
-    this.consola = consola;
-    this.categoria = categoria;
-    this.categoriaDos = categoriaDos;   
-    this.imagen = imagen;
-    this.cantidad = 1;
-    this.id = indexObjet++;
-    }
-};
-
-arrayProductos.forEach (p => {
-    juegos.innerHTML +=
-    `
-    <div class="card border-light mb-3 col-4 producto ${p.categoria} ${p.categoriaDos} ${p.consola}" id="producto${p.id}">
-    <img src= ${p.imagen} class="card-img-top" alt= ${p.nombre}, ${p.consola}> 
-    <div class="card-body d-flex justify-content-around">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarCarritoModal${p.id}">Comprar</button>
-        <p class="card-text align-self-center">$${p.precio}</p>
-    </div>
-    </div>
-    <div class="modal fade" id="agregarCarritoModal${p.id}" tabindex="-1" aria-labelledby="agregarCarritoModalLabel${p.id}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-        <div class="modal-body">
-            <p> Desea agregar ${p.nombre} al carrito?</p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="agregarCarritoProducto${p.id}">Si</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
-        </div>
-        </div>
-    </div>
-    </div>
-    `
-}
-);
-
-//carrito
-
+const contador = document.getElementById("contador");
+const formComprar = document.getElementById("formComprar");
 const carrito = [];
 
-const selecProd = (btn, prod, id) => {
-    $(btn).click(function(){
+const selecProd = (prod, id) => {
         if (carrito.find((prod) => prod.id === id)) {
             prod.cantidad++
         } else {
@@ -80,8 +36,7 @@ const selecProd = (btn, prod, id) => {
         }
         calcularPrecio ();
         contadorCarrito ();
-    }
-    )
+        console.log(carrito)
 }
 
 const agregarCarrito = () => {

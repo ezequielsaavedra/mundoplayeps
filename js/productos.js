@@ -117,7 +117,7 @@ obtenerProductos().then(arrayProductos => {
                 <p> Desea agregar ${p.nombre} al carrito?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Si</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick= "selecProd(producto${p.id},${p.id})" id="agregarCarritoProducto${p.id}">Si</button>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
             </div>
             </div>
