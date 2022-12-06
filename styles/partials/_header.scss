@@ -18,8 +18,8 @@ header {
         background-color: rgb(207, 204, 204);
         width: 1.5rem;
         font-size: 1.2rem;
-        border-radius: 10px;
+        border-radius: 50%;
         font-family:$font;
-        cursor: pointer;
+        position: absolute;
     }
 }

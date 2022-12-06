@@ -19,16 +19,58 @@ $("#btnIngresar").click(function(){
     }
 })
 
+// body
 
-//carrito
-
+const juegos = document.getElementById("juegos");
 const carritoOffcanvas = document.getElementById("carrito");
 const totalCompra = document.getElementById("totalCompra");
 const contador = document.getElementById("contador");
 const formComprar = document.getElementById("formComprar");
+const arrayProductos = [];
+
+const obtenerProductos = async () => {
+    const response = await fetch("./json/productos.json")
+    const productos = await response.json()
+    productos.forEach (p=> {
+        arrayProductos.push(p)
+    })
+    return arrayProductos
+}
+
+obtenerProductos().then(arrayProductos => {
+    arrayProductos.forEach ((p) => {
+        juegos.innerHTML +=
+        `
+        <div class="card border-light mb-3 col-4 producto ${p.categoria} ${p.categoriaDos} ${p.consola}" id="producto${p.id}">
+        <img src= ${p.imagen} class="card-img-top" alt= ${p.nombre}, ${p.consola}> 
+        <div class="card-body d-flex justify-content-around">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarCarritoModal${p.id}">Comprar</button>
+            <p class="card-text align-self-center">$${p.precio}</p>
+        </div>
+        </div>
+        <div class="modal fade" id="agregarCarritoModal${p.id}" tabindex="-1" aria-labelledby="agregarCarritoModalLabel${p.id}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-body">
+                <p> Desea agregar ${p.nombre} al carrito?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick= "selecProd(arrayProductos[${p.id}],${p.id})" id="agregarCarritoProducto${p.id}">Si</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        `
+})
+}
+);
+
 const carrito = [];
 
 const selecProd = (prod, id) => {
+    if (prod.stock >= 1) {
+        prod.stock--
         if (carrito.find((prod) => prod.id === id)) {
             prod.cantidad++
         } else {
@@ -37,7 +79,15 @@ const selecProd = (prod, id) => {
         calcularPrecio ();
         contadorCarrito ();
         console.log(carrito)
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Lo siento!',
+            text: "Ya no tenemos ese producto disponible."
+        })
+    }
 }
+
 
 const agregarCarrito = () => {
     $("#btnCarrito").click(function(){
@@ -74,7 +124,7 @@ const actualizarCarrito = () =>{
                     <h5 class="card-title">${p.nombre}</h5>
                     <p class="card-text" id="cantidadProd">Cantidad: x${p.cantidad}</p>
                     <p class="card-text">Precio: $${p.precio}</p>
-                    <button type="button" class="btn btn-danger position-absolute top-50 start-100 translate-middle me-5 btn-remove" onClick="eliminarCarrito(${p.id})" id="btnRemove${p.id}">-</button>
+                    <button type="button" class="btn btn-danger position-absolute top-50 start-100 translate-middle me-5 btn-remove" onClick="eliminarCarrito(${p.id})">-</button>
                 </div>
             </div>
         </div>
