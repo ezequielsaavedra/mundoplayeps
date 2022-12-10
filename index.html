@@ -20,6 +20,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+            <form class="d-flex searchBar" role="search">
+                <input class="form-control me-2 hidden" type="search" placeholder="buscar" aria-label="Search" id="inputBuscar">
+                <button class="btn btn-primary hidden" type="button" id="buttonBuscar">Buscar</button>
+            </form>
         </nav>
         <!-- offcanvas -->
         <div class="col-1 d-flex" >
@@ -39,7 +43,10 @@
                 <div>
                     <hr>
                     <h5 id="totalCompra"></h5>
+                    <h6 id="iva"></h6>
+                    <h5 id="precioFinal"></h5>
                     <button class="btn btn-primary" id="finalizarCompra" type="button" onclick="finalizarCompra()">Finalizar compra</button>
+                    <button class="btn btn-danger" id="vaciarCarrito" type="button" onclick="vaciarCarrito()">Vaciar Carrito</button>
                 </div>
                 <div id="formComprar">
                 </div>
@@ -81,41 +88,43 @@
                     </button>
                     <h2>Categorias</h2>
                     <div class="form-check">
-                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Disparos" value="option1">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocategoria" id="Disparos" value="option1">
                         <label class="form-check-label" for="Disparos">
                             Disparos
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Aventura" value="option2">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocategoria" id="Aventura" value="option2">
                         <label class="form-check-label" for="Aventura">
                             Aventura
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Accion" value="option3">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocategoria" id="Accion" value="option3">
                         <label class="form-check-label" for="Accion">
                             Accion
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="Deportes" value="option4">
+                        <input class="form-check-input categoriaButtons filtrosButton" type="radio" name="filtrocategoria" id="Deportes" value="option4">
                         <label class="form-check-label" for="Deportes">
                             Deportes
                         </label>
                     </div>
-                    <h2 class="pt-5">Consola</h2>
-                    <div class="form-check">
-                        <input class="form-check-input consolaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="PS4" value="option5">
-                        <label class="form-check-label" for="PS4">
-                            PS4
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input consolaButtons filtrosButton" type="radio" name="filtrocheckboxs" id="PS5" value="option6">
-                        <label class="form-check-label" for="PS5">
-                            PS5
-                        </label>
+                    <div id="filtroConsola">
+                        <h2 class="pt-5">Consola</h2>
+                        <div class="form-check">
+                            <input class="form-check-input consolaButtons filtrosButton" type="radio" name="filtroconsola" id="PS4" value="option1">
+                            <label class="form-check-label" for="PS4">
+                                PS4
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input consolaButtons filtrosButton" type="radio" name="filtroconsola" id="PS5" value="option2">
+                            <label class="form-check-label" for="PS5">
+                                PS5
+                            </label>
+                        </div>
                     </div>
                 </aside>
                 <!-- juegos -->
