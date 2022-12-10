@@ -8,7 +8,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/74RrfwB/bloodborne-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 7,
         "className": "bloodborne"
     },
     {
@@ -32,7 +32,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/PrPGtym/horizon-forbidden-west-ps5.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 6,
         "className": "horizonforbbidenwest"
     },
     {
@@ -44,7 +44,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/4ZVfvhT/days-gone-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 8,
         "className": "daysgone"
     },
     {
@@ -56,7 +56,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/NVHjZPS/god-of-war-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 14,
         "className": "godofwar"
     },
     {
@@ -68,7 +68,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/dGHHbLX/cod-moder-warfare-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 2,
         "className": "callofdutymodernwarfare"
     },
     {
@@ -80,7 +80,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/YRJHNsz/spiderman-miles-morales-ps5.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 1,
         "className": "spidermanmilesmorales"
     },
     {
@@ -92,7 +92,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/1LqDB7J/elden-ring-ps5.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 19,
         "className": "eldenring"
     },
     {
@@ -104,7 +104,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/2yYzbhT/demons-souls-ps5.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 11,
         "className": "demonsouls"
     },
     {
@@ -116,7 +116,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/QjvnbTL/tlou-2-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 12,
         "className": "thelastofusparteii"
     },
     {
@@ -140,7 +140,7 @@
         "categoriaDos": "Producto-destacado",
         "imagen": "https://i.ibb.co/3TqMHkf/uncharted-coleccion-legado-ps5.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 6,
         "className": "uncharteslegadodeladrones"
     },
     {
@@ -152,7 +152,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/6nW5RmH/tlou-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 8,
         "className": "thelastofus"
     },
     {
@@ -164,7 +164,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/9ytfrKY/gtav-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 16,
         "className": "gtav"
     },
     {
@@ -176,7 +176,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/wzFnsqs/horizon-zero-dawn-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 9,
         "className": "horizonzerodawn"
     },
     {
@@ -188,7 +188,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/jbNdSz9/spiderman-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 3,
         "className": "spiderman"
     },
     {
@@ -200,7 +200,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/GPcQHCB/uncharted-4-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 0,
         "className": "ucharted4"
     },
     {
@@ -212,7 +212,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/tm8wNks/got-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 7,
         "className": "ghostoftsushima"
     },
     {
@@ -224,7 +224,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/SnZSzc4/god-of-war-ragnarok-ps4.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 10,
         "className": "godofwarragnarokps4"
     },
     {
@@ -236,7 +236,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/PmDyrZY/battlefield1.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 1,
         "className": "battlefield1"
     },
     {
@@ -248,7 +248,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/zPV3SYn/borderlands-3.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 7,
         "className": "borderlands3"
     },
     {
@@ -260,7 +260,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/ZS4G9VJ/callofdutymodernwarfare.png",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 8,
         "className": "callofdutymodernwarfareremastered"
     },
     {
@@ -284,7 +284,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/C5mSVB8/fifa-22.png",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 9,
         "className": "fifa22"
     },
     {
@@ -296,7 +296,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/gRXh2Q0/gran-turismo.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 4,
         "className": "granturismo"
     },
     {
@@ -308,7 +308,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/2NNVc6m/nba2k21.png",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 4,
         "className": "nba2k21"
     },
     {
@@ -320,7 +320,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/FqdY2PB/nba2k23.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 3,
         "className": "nba2k23"
     },
     {
@@ -332,7 +332,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/4Yn23Ft/nhl-20.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 11,
         "className": "nhl20"
     },
     {
@@ -344,7 +344,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/hFybr2T/rainbowsixextraction-1.png",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 15,
         "className": "rainbowsixextraction"
     },
     {
@@ -356,7 +356,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/Rcd6Z8h/rainbowsixsiege.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 16,
         "className": "rainbowsixsiege"
     },
     {
@@ -368,7 +368,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/nnGMk7J/sniper-elite-5.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 8,
         "className": "sniperelite5"
     },
     {
@@ -380,7 +380,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/Xbk6Hbt/steep.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 9,
         "className": "steep"
     },
     {
@@ -392,7 +392,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/bX8pjGy/tennis-2.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 2,
         "className": "aotennis2"
     },
     {
@@ -404,7 +404,7 @@
         "categoriaDos": "Producto-estandar",
         "imagen": "https://i.ibb.co/XzBrQVL/theshow21.jpg",
         "cantidad": 1,
-        "stock": 5,
+        "stock": 3,
         "className": "theshow21"
     },
     {
