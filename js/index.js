@@ -257,12 +257,17 @@ finalizarCompra ();
 
 //filtros
 
-const agregarFiltrosCategorias = (btn, prod) => {
+const agregarFiltrosCategorias = (btn, prod, btn2) => {
     $(btn).change(function(){
         $(".producto").hide();
         $(prod).toggle();
         $("#eliminarFiltros").show();
         $("#filtroConsola").show();
+        $("#AccionBtn").hide();
+        $("#AventuraBtn").hide();
+        $("#DeportesBtn").hide();
+        $("#DisparosBtn").hide();
+        $(btn2).show();
         $(".consolaButtons").prop("checked", false);
     }
     )
@@ -288,18 +293,18 @@ const eliminarFiltros = () => {
 
 eliminarFiltros ();
 
-agregarFiltrosCategorias ("#Accion",".Accion");
-agregarFiltrosCategorias ("#Aventura", ".Aventura");
-agregarFiltrosCategorias ("#Disparos", ".Disparos");
-agregarFiltrosCategorias ("#Deportes", ".Deportes");
-agregarFiltrosConsolas ("#PS4", ".Accion-PS4");
-agregarFiltrosConsolas ("#PS4", ".Aventura-PS4");
-agregarFiltrosConsolas ("#PS4", ".Disparos-PS4");
-agregarFiltrosConsolas ("#PS4", ".Deportes-PS4");
-agregarFiltrosConsolas ("#PS5", ".Accion-PS5");
-agregarFiltrosConsolas ("#PS5", ".Aventura-PS5");
-agregarFiltrosConsolas ("#PS5", ".Disparos-PS5");
-agregarFiltrosConsolas ("#PS5", ".Deportes-PS5");
+agregarFiltrosCategorias ("#Accion",".Accion", "#AccionBtn");
+agregarFiltrosCategorias ("#Aventura", ".Aventura", "#AventuraBtn");
+agregarFiltrosCategorias ("#Disparos", ".Disparos", "#DisparosBtn");
+agregarFiltrosCategorias ("#Deportes", ".Deportes", "#DeportesBtn");
+agregarFiltrosConsolas ("#PS4-Accion", ".Accion-PS4");
+agregarFiltrosConsolas ("#PS5-Accion", ".Accion-PS5");
+agregarFiltrosConsolas ("#PS4-Aventura", ".Aventura-PS4");
+agregarFiltrosConsolas ("#PS5-Aventura", ".Aventura-PS5");
+agregarFiltrosConsolas ("#PS4-Deportes", ".Deportes-PS4");
+agregarFiltrosConsolas ("#PS5-Deportes", ".Deportes-PS5");
+agregarFiltrosConsolas ("#PS4-Disparos", ".Disparos-PS4");
+agregarFiltrosConsolas ("#PS5-Disparos", ".Disparos-PS5");
 
 //buscador
 
@@ -309,6 +314,7 @@ const searchBar = () => {
     $("#buttonBuscar").click(function(){
         $(".producto").hide();
         $("#eliminarFiltros").show();
+        $(".filtrosButton").prop("checked", false);
         const arrayBuscar = arrayProductos.filter((p)=> p.className.includes(`${inputBuscar.value.toLowerCase()}`))
         const mostrarBuscador = arrayBuscar.forEach(p=> {
             $(`.${p.className}`).show();
